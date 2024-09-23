@@ -1,0 +1,51 @@
+.register-account-container {
+    padding: 56px 24px;
+
+    .register-account-info-container {
+        display: flex;
+        gap: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #1EEA00;
+
+        .register-account-info-description {
+            color: #757575;
+        }
+    }
+
+    .register-account-title {
+        color: #004B40;
+        font-weight: 600;
+        width: max-content;
+    }
+
+    .register-account-form-container {
+        padding-top: 24px;
+
+        .register-account-form-configure-container {
+            margin-top: 32px;
+        }
+
+        .register-account-button-container {
+            margin-top: 70px;
+        }
+
+        .register-account-form-select-container{
+            width: 100%;
+
+            .error-text{
+                color: #c5000f;
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+ion-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+ion-item{
+    --padding-bottom: 16px
+}

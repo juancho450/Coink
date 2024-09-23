@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" icon="assets/icon/nav-arrow-left.svg" a></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="secondary">FINALIZAR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="register-finalize-container">
+    <div class="register-finalize-info-container">
+      <img src="assets/icon/OinkPolicia.svg" alt="oink" loading="lazy">
+      <div>
+        <p class="register-finalize-info-title">ESTAS MUY CERCA DE SER PARTE DE COINK.</p>
+        <p class="register-finalize-info-description">Solo es necesario que leas detenidamente el contrato que se
+          encuentra al final de esta pantalla y lo aceptes.</p>
+      </div>
+
+    </div>
+    <div class="register-finalize-contract-container">
+      <p class="register-finalize-contract-title">LO MÁS IMPORTANTE</p>
+      <div class="register-finalize-contract-description">
+        <p>Para la apertura del Depósito de Bajo Monto en COINK debes ser una persona natural que de acuerdo con nuestra
+          legislación vigente te encuentres en plena capacidad para adquirir derechos y contraer obligaciones.</p>
+        <p> Abrirás una cuenta COINK de Bajo Monto la cual te permitirá tener un saldo hasta por 8 salarios mínimos en el
+          mes y realizar débitos por el mismo valor. Si deseas sobrepasar estos límites debes solicitarnos la apertura de un
+          Depósito Ordinario COINK Persona Natural.</p>
+        <p>Solo puedes tener una cuenta COINK de Bajo Monto y podrás utilizar tu dispositivo móvil para consultar tu saldo,
+          tus movimientos, realizar tus transacciones y administrar tu cuenta. </p>
+        <p>Recuerda que no necesitas saldo mínimo ni monto inicial para su apertura.</p>
+      </div>
+    </div>
+    <div>
+      <div class="ion-margin-bottom">
+        <a class="register-finalize-contract-label " (click)="handleReadContract()">Lee tu contrato</a>
+      </div>
+      <ion-checkbox labelPlacement="end" [formControl]="readContractControl">He leído ya acepto el contrato</ion-checkbox>
+    </div>
+    <div class="register-finalize-button-container">
+      <ion-button shape="round" color="primary" expand="full" (click)="handleAccept()"
+        [disabled]="!readContractControl.value">ACEPTAR</ion-button>
+    </div>
+ 
+  </div>
+</ion-content>

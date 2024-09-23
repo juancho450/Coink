@@ -1,0 +1,7 @@
+{
+  "name": "Coink",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

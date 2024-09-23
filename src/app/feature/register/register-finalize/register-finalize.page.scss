@@ -1,0 +1,55 @@
+ion-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.register-finalize-container {
+    padding: 56px 24px;
+
+    .register-finalize-info-container {
+        display: flex;
+        gap: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #1EEA00;
+
+        .register-finalize-info-title {
+            color: #004B40;
+            font-weight: 600;
+        }
+
+        .register-finalize-info-description {
+            color: #757575;
+            font-size: 14px;
+        }
+
+     
+    }
+
+    .register-finalize-contract-container{
+        margin: 40px 0px;
+
+        .register-finalize-contract-title{
+            color: #004B40;
+            font-weight: 600;
+        }
+
+        .register-finalize-contract-description {
+            color: #323232;
+            font-size: 14px;
+        }
+    }
+
+    .register-finalize-contract-label {
+        color: #004B40;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+
+    .register-finalize-button-container{
+        margin-top: 40px;
+    }
+
+
+  
+
+}

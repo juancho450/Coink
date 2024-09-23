@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "id": "10001",
+            "value": "Tarjeta de identidad"
+        },
+        {
+            "id": "10002",
+            "value": "Cédula de ciudadanía"
+        },
+        {
+            "id": "10003",
+            "value": "Cédula de extranjeria"
+        }
+    ]
+}

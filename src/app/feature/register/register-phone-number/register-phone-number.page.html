@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" icon="assets/icon/nav-arrow-left.svg" a></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="secondary">NÚMERO CELULAR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="register-phone-container">
+    <div class="register-phone-info-container">
+      <img src="assets/icon/Oink.svg" alt="oink" loading="lazy">
+      <p class="register-phone-info-title">Para comenzar, por favor ingresa <span>tu número celular.</span></p>
+    </div>
+    <div class="register-phone-number-pad-container">
+      <app-number-pad (sendPhoneNumber)="handlePhoneNumber($event)"></app-number-pad>
+    </div>
+  </div>
+</ion-content>

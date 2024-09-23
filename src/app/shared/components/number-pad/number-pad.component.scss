@@ -1,0 +1,39 @@
+ion-button {
+    font-size: 32px;
+}
+
+ion-col {
+    text-align: center;
+}
+
+ion-input{
+  
+}
+.number-pad-container{
+    margin-top: 48px;
+
+    .number-pad-button-check {
+        img {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.number-pad-input-container{
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    width: 100%;
+    height: 56px;
+    box-shadow: 0px 5px 5px rgba(53, 53, 53, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 14px 0px;
+
+    .number-pad-input-placeholder{
+        color: #AAAAAA;
+    }
+}
+
+

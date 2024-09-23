@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" icon="assets/icon/nav-arrow-left.svg" a></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="secondary">DATOS DE CUENTA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="register-account-container">
+    <div class="register-account-info-container">
+      <img src="assets/icon/Oink.svg" alt="oink" loading="lazy">
+      <div>
+        <p class="register-account-title">¿CUÁLES SON TUS DATOS?</p>
+        <p class="register-account-info-description">Ahora necesitamos saber algunos datos tuyos</p>
+      </div>
+
+    </div>
+    <div class="register-account-form-container">
+      <form [formGroup]="registerAccountFormGroup">
+        <p class="register-account-title">
+          Documento de identidad
+        </p>
+
+        <ion-item>
+          <div class="register-account-form-select-container">
+            <ion-select aria-label="Fruit" interface="popover" label="Tipo de documento" labelPlacement="floating"
+              color="dark" formControlName="documentType">
+              @for(documentType of documentTypeList; track documentType.id){
+                <ion-select-option [value]="documentType.id">{{documentType.value}}</ion-select-option>
+              }
+            </ion-select>
+            @if (handleFormControlError('documentType')) {
+              <p class="error-text">{{handleFormControlError('documentType')}}</p>
+            }
+          </div>
+        </ion-item>
+
+        <ion-item>
+          <ion-input label="Número de documento" labelPlacement="floating" color="dark" formControlName="documentNumber"  [maskito]="numberMask"   [maskitoElement]="maskPredicate"  [maxlength]="10"
+            [errorText]="handleFormControlError('documentNumber')"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input label="Fecha de expedición del documento" labelPlacement="floating" color="dark" [maskito]="dateMastk"   [maskitoElement]="maskPredicate" 
+            formControlName="expeditionDate" [errorText]="handleFormControlError('expeditionDate')"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input label="Fecha de nacimiento" labelPlacement="floating" color="dark" formControlName="birthDate" [maskito]="dateMastk"   [maskitoElement]="maskPredicate" 
+            [errorText]="handleFormControlError('birthDate')"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <div class="register-account-form-select-container">
+            <ion-select aria-label="Fruit" interface="popover" label="Genero" labelPlacement="floating" color="dark"
+              formControlName="gender">
+              @for(gender of genderList; track gender.id){
+              <ion-select-option [value]="gender.id">{{gender.value}}</ion-select-option>
+              }
+            </ion-select>
+            @if (handleFormControlError('gender')) {
+              <p class="error-text">{{handleFormControlError('gender')}}</p>
+            }
+          </div>
+        </ion-item>
+
+        <div class="register-account-form-configure-container">
+          <p class="register-account-title">Configura tu cuenta</p>
+          <ion-item>
+            <ion-input label="Correo electrónico" type="email" labelPlacement="floating" color="dark"
+              formControlName="email" [errorText]="handleFormControlError('email')"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="Confirmar correo electrónico" type="email" labelPlacement="floating" color="dark"
+              formControlName="confirmEmail" [errorText]="handleFormControlError('confirmEmail')"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="PIN de seguridad" labelPlacement="floating" color="dark" type="password" [maskito]="numberMask"   [maskitoElement]="maskPredicate"  [maxlength]="4"
+              formControlName="pin" [errorText]="handleFormControlError('pin')">
+              <ion-input-password-toggle slot="end" color="dark"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="Confirmar PIN de seguridad" labelPlacement="floating" color="dark" [maskito]="numberMask"   [maskitoElement]="maskPredicate"  [maxlength]="4"
+              formControlName="confirmPin" type="password" [errorText]="handleFormControlError('confirmPin')">
+              <ion-input-password-toggle slot="end" color="dark"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+          <div class="register-account-button-container">
+            <ion-button shape="round" color="primary" expand="full" (click)="handleNext()"
+              [disabled]="!registerAccountFormGroup.valid">SIGUIENTE</ion-button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

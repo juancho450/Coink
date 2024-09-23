@@ -1,0 +1,37 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+:root {
+    --ion-color-primary: #1EEA00;
+    --ion-color-primary-rgb: 30, 234, 0;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0, 0, 0;
+    --ion-color-primary-shade: #1ace00;
+    --ion-color-primary-tint: #35ec1a;
+
+
+    --ion-color-secondary: #004B40;
+    --ion-color-secondary-rgb: 0, 75, 64;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #004238;
+    --ion-color-secondary-tint: #1a5d53;
+}
+
+ion-button {
+    font-weight: 600;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+
+    &.button-disabled {
+        --ion-color-primary: #D3D3D3;
+    }
+}
+
+ion-back-button{
+    --icon-font-size: 40px;
+}
+
+ion-checkbox {
+    --checkbox-background-checked: #1EEA00;
+  }
+  

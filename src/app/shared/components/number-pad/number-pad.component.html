@@ -1,0 +1,50 @@
+<div class="number-pad-input-container">
+  @if (phoneNumber) {
+    {{phoneNumber}}
+  } @else {
+    <p class="number-pad-input-placeholder">( XXX - XXXXXXX)</p>
+  }
+</div>
+<div class="number-pad-container">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(1)">1</ion-button></ion-col>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(2)">2</ion-button></ion-col>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(3)">3</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(4)">4</ion-button></ion-col>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(5)">5</ion-button></ion-col>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(6)">6</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(7)">7</ion-button></ion-col>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(8)">8</ion-button></ion-col>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(9)">9</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-button fill="clear" color="secondary" shape="round" (click)="handleDeleteNumber()">
+          <img src="assets/icon/backspace.svg" alt="backspace">
+        </ion-button>
+      </ion-col>
+      <ion-col size="4"><ion-button fill="clear" color="secondary" shape="round"
+          (click)="handleAppendNumber(0)">0</ion-button></ion-col>
+      <ion-col size="4"><ion-button color="primary" shape="round" (click)="handleConfirmNumber()" [disabled]="phoneNumber.length !== 10">
+          <div class="number-pad-button-check">
+            <img src="assets/icon/check.svg" alt="backspace">
+          </div>
+        </ion-button>
+      </ion-col> 
+    </ion-row>
+  </ion-grid>
+</div>

@@ -1,0 +1,10 @@
+<ion-content>
+  <div class="modal-container">
+      <img [src]="image" alt="image">
+      <p class="modal-title">{{title}}</p>
+      <p class="modal-message">{{message}}</p>
+      <div class="modal-button-container">
+        <ion-button shape="round" color="primary" expand="full" (click)="handleClickEventModal()">{{labelButton}}</ion-button>
+      </div>
+  </div>
+</ion-content>
